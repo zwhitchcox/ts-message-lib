@@ -1,0 +1,24 @@
+{
+  "name": "ts-message-lib",
+  "version": "0.0.1",
+  "description": "A simple thingspace.io library for device messaging",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --debug-brk"
+  },
+  "repository": "www.github.com/irvui/ts-message-lib",
+  "keywords": [
+    "Tessel",
+    "thingspace"
+  ],
+  "license": "MIT",
+  "readme": "A simple tested library for thingspace.io device messaging",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "colors": "^1.1.2",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}

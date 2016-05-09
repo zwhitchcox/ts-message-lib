@@ -1,0 +1,8 @@
+{
+  "name": "ts-message-lib",
+  "version": false,
+  "ambientDependencies": {
+    "chai": "registry:dt/chai#3.4.0+20160317120654",
+    "node": "registry:dt/node#4.0.0+20160412142033"
+  }
+}

@@ -1,0 +1,18 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Run Tests",
+			"type": "node",
+			"request": "launch",
+			"cwd": "${workspaceRoot}",
+			"program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+			"runtimeArgs": [ ],
+			"args": [
+				"--colors",
+				"-R", "spec"
+			],
+			"sourceMaps": false
+		}
+	]
+}
