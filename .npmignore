@@ -1,0 +1,4 @@
+.vscode
+typings.json
+bower.json
+webpack.config.json

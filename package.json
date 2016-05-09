@@ -1,12 +1,23 @@
 {
   "name": "ts-message-lib",
   "version": "0.0.1",
+  "author": {
+    "name": "Daniel Scholl",
+    "email": "daniel.scholl@verizon.com"
+  },
+   "contributors": [
+    {"name": "Hari Mukkapati", "email": "hari.mukkapati@verizon.com"},
+    {"name": "Daniel Scholl", "email": "daniel.scholl@verizon.com"}
+  ],
   "description": "A simple thingspace.io library for device messaging",
   "main": "index.js",
   "scripts": {
     "test": "mocha --debug-brk"
   },
-  "repository": "www.github.com/irvui/ts-message-lib",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/irvui/ts-message-lib.git"
+  },
   "keywords": [
     "Tessel",
     "thingspace"

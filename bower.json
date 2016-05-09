@@ -1,0 +1,29 @@
+{
+  "name": "ts-message-lib",
+  "description": "A simple thingspace.io library for device messaging",
+  "main": "dist/ts-message-lib.js",
+  "authors": [
+    "Daniel Scholl <daniel.scholl@verizon.com>",
+    "Hari Mukkapati <hari.mukkapati@verizon.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Tessel",
+    "thingspace"
+  ],
+  "homepage": "https://github.com/IRVUI/ts-message-lib",
+  "ignore": [
+      "node_modules",
+      ".vscode",
+      "lib",
+      "test",
+      ".bowerrc",
+      ".gitignore",
+      ".npmignore",
+      "typings.json",
+      "bower.json",
+      "webpack.config.js",
+      "package.json",
+      "README.md"
+    ]
+}
