@@ -21,8 +21,8 @@ describe('The HTTP Proxy', () => {
 describe('Getting Device Messages from thingspace.io', () => {
 	let response = null;
 	before((done) => {
-		let client = new Client({thing: 'some_thing'});
-		client.list((err, resp) => {
+		let client = new Client();
+		client.list({thing: 'some_thing'}, (err, resp) => {
 			response = resp;
 			done();
 		});
@@ -32,8 +32,8 @@ describe('Getting Device Messages from thingspace.io', () => {
 	it('defines a data array', () => response.data.should.be.instanceof(Array));
 	it('should get 200 when thing is found', () => response.status.should.be.equal(200));
 	it('should get 404 when thing not found', (done) => {
-		let client = new Client({thing: 'no_thing'});
-		client.list((err, resp) => {
+		let client = new Client();
+		client.list(null, (err, resp) => {
 			resp.status.should.be.equal(404);
 			done();
 		});

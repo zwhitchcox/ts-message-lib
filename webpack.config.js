@@ -1,8 +1,16 @@
 // webpack.config.js
 module.exports = {
-  entry: './index.js',
+  entry  : './index.js',
+  output : {
+    path     : 'dist',
+    filename : 'ts-message-lib.js'
+  },
   target: 'node',
-  output: {
-    filename: 'dist/ts-message-lib.js'
+  module : {
+    loaders: [ {
+        test   : /.js$/,
+        loader : 'babel-loader'
+      }
+    ]
   }
 };

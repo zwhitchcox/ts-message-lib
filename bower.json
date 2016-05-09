@@ -21,6 +21,7 @@
       ".bowerrc",
       ".gitignore",
       ".npmignore",
+      ".editorconfig",
       "typings.json",
       "bower.json",
       "webpack.config.js",

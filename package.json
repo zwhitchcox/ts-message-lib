@@ -5,9 +5,15 @@
     "name": "Daniel Scholl",
     "email": "daniel.scholl@verizon.com"
   },
-   "contributors": [
-    {"name": "Hari Mukkapati", "email": "hari.mukkapati@verizon.com"},
-    {"name": "Daniel Scholl", "email": "daniel.scholl@verizon.com"}
+  "contributors": [
+    {
+      "name": "Hari Mukkapati",
+      "email": "hari.mukkapati@verizon.com"
+    },
+    {
+      "name": "Daniel Scholl",
+      "email": "daniel.scholl@verizon.com"
+    }
   ],
   "description": "A simple thingspace.io library for device messaging",
   "main": "index.js",
@@ -25,11 +31,14 @@
   "license": "MIT",
   "readme": "A simple tested library for thingspace.io device messaging",
   "devDependencies": {
+    "babel-core": "^6.8.0",
+    "babel-loader": "^6.2.4",
     "chai": "^3.5.0",
     "colors": "^1.1.2",
     "mocha": "^2.4.5"
   },
   "dependencies": {
+    "babel-loader": "^6.2.4",
     "xmlhttprequest": "^1.8.0"
   }
 }
