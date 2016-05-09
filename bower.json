@@ -25,6 +25,8 @@
       "bower.json",
       "webpack.config.js",
       "package.json",
-      "README.md"
+      "README.md",
+      "index.js",
+      "jsconfig.json"
     ]
 }
