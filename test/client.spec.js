@@ -1,6 +1,5 @@
 'use strict';
 const should = require('chai').should();
-
 const Client = require('../lib');
 const Config = require('../lib/config');
 const Proxy = require('../lib/proxy');
@@ -28,16 +27,18 @@ describe('Getting Device Messages from thingspace.io', () => {
 		});
 	});
 
-	it('defines a status property', () => response.should.have.property('status'));
-	it('defines a data array', () => response.data.should.be.instanceof(Array));
-	it('should get 200 when thing is found', () => response.status.should.be.equal(200));
+	it('defines a status property', 
+    () => response.should.have.property('status'));
+	it('defines a data array', 
+    () => response.data.should.be.instanceof(Array));
+	it('should get 200 when thing is found', 
+    () => response.status.should.be.equal(200));
 	it('should get 404 when thing not found', (done) => {
 		let client = new Client();
-		client.list(null, (err, resp) => {
+		client.list({thing:'asdlfjasdlfjasdfjaks'}, (err, resp) => {
+      console.log(resp.status)
 			resp.status.should.be.equal(404);
-      console.dir(resp)
 			done();
 		});
 	});
-
 });
