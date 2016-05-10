@@ -1,6 +1,6 @@
 {
   "name": "ts-message-lib",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": {
     "name": "Daniel Scholl",
     "email": "daniel.scholl@verizon.com"
@@ -37,13 +37,15 @@
     "chai": "^3.5.0",
     "colors": "^1.1.2",
     "mocha": "^2.4.5",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "node-uuid": "^1.4.7"
   },
   "dependencies": {
     "bluebird": "^3.3.5",
     "exenv": "^1.2.1",
     "httpplease": "^0.16.4",
     "node-fetch": "^1.5.2",
+    "node-uuid": "^1.4.7",
     "webpack": "^1.13.0",
     "whatwg-fetch": "^1.0.0",
     "xmlhttprequest": "^1.8.0"

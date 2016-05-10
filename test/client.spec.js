@@ -1,5 +1,7 @@
 'use strict';
 const should = require('chai').should();
+const expect = require('chai').expect;
+const uuid = require('node-uuid');
 const Client = require('../lib');
 const Config = require('../lib/config');
 const Proxy = require('../lib/proxy');
@@ -17,28 +19,47 @@ describe('The HTTP Proxy', () => {
 	});
 });
 
-describe('Getting Device Messages from thingspace.io', () => {
-	let response = null;
-	before((done) => {
-		let client = new Client();
-		client.list({thing: 'no_thing'}, (err, resp) => {
-			response = resp;
-			done();
+describe('The Client', () => {
+	let client = new Client();
+	client.thing = uuid.v4();
+
+	describe('Sending Message to thingspace.io', () => {
+		it('defines a function create', () => client.create.should.be.function );
+		it('requires data arguments', () => expect(() => client.create(null, null)).to.throw('invalid input'));
+		it('requires a callback', () => expect(() => client.create({}, null)).to.throw('invalid input'));
+
+		it('Creates a message and returns success', (done) => {
+			client.create({unit: 'test'}, function(err, resp) {
+				resp.status.should.be.equal(200);
+				done();
+			});
 		});
 	});
 
-	it('defines a status property', 
-    () => response.should.have.property('status'));
-	it('defines a data array', 
-    () => response.data.should.be.instanceof(Array));
-	it('should get 200 when thing is found', 
-    () => response.status.should.be.equal(200));
-	it('should get 404 when thing not found', (done) => {
-		let client = new Client();
-		client.list({thing:'asdlfjasdlfjasdfjaks'}, (err, resp) => {
-      console.log(resp.status)
-			resp.status.should.be.equal(404);
-			done();
+	describe('Retrieving Messages from thingspace.io', () => {
+		let response = null;
+
+		it('defines a function list', () => client.list.should.be.function );
+		it('requires a callback', () => expect(() => client.list(null, null)).to.throw('invalid input'));
+		it('should get 200 when thing is found', (done) => {
+			client.list(null, (err, resp) => {
+				resp.status.should.be.equal(200);
+				response = resp;
+				done();
+			});
 		});
+		it('should get 404 when thing not found', (done) => {
+			client.list(uuid.v4(), (err, resp) => {
+				resp.status.should.be.equal(404);
+				done();
+			});
+		});
+		it('defines a status property', () => response.should.have.property('status'));
+		it('defines a data array', () => response.data.should.be.instanceof(Array));
+
 	});
 });
+
+
+
+
