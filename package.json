@@ -37,7 +37,8 @@
     "chai": "^3.5.0",
     "colors": "^1.1.2",
     "mocha": "^2.4.5",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "node-uuid": "^1.4.7"
   },
   "dependencies": {
     "xmlhttprequest": "^1.8.0"

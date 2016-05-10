@@ -1,6 +1,6 @@
 {
   "name": "ts-message-lib",
-	"version": "0.0.3",
+	"version": "0.0.4",
   "description": "A simple thingspace.io library for device messaging",
   "main": "dist/ts-message-lib.js",
   "authors": [
