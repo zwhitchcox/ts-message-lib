@@ -22,7 +22,7 @@ describe('Getting Device Messages from thingspace.io', () => {
 	let response = null;
 	before((done) => {
 		let client = new Client();
-		client.list({thing: 'some_thing'}, (err, resp) => {
+		client.list({thing: 'no_thing'}, (err, resp) => {
 			response = resp;
 			done();
 		});
@@ -35,6 +35,7 @@ describe('Getting Device Messages from thingspace.io', () => {
 		let client = new Client();
 		client.list(null, (err, resp) => {
 			resp.status.should.be.equal(404);
+      console.dir(resp)
 			done();
 		});
 	});
