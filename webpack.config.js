@@ -13,11 +13,19 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.TARGET': '"browser"',
     }),
+    new webpack.optimize.UglifyJsPlugin()
   ],
   module : {
     loaders: [ {
         test   : /.js$/,
-        loader : 'babel'
+        loader : 'babel',
+        query  : {
+          babelrc: false,
+          presets: [
+            'es2015',
+            'stage-0',
+          ]
+        }
       }
     ]
   }
